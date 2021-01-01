@@ -7,7 +7,7 @@ void fibonacci(int *x, int *y){
 }
 
 int main(){
-    int a = 1, b = 1,  sum  = 0;
+    int a = 1, b = 1, sum  = 0;
     while(b <= 4000000){
         fibonacci(&a, &b);
         if(b%2 == 0)
