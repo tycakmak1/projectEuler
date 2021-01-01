@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void fibonacci(int* x, int* y){
+void fibonacci(int *x, int *y){
     *y = *x + *y;
     *x = *y - *x;
 }
