@@ -14,8 +14,13 @@ int main(){
 
     for(i = 0; i < 986; i++){
         product = 1;
-        for(j = i; j < i + 13; j++)
+        for(j = i; j < i + 13; j++){
+            if(numberArray[j] == 0){
+                i = j + 1;
+                break;
+            }
             product *= numberArray[j];
+        }
         if(maxProduct < product)
             maxProduct = product;
     }
