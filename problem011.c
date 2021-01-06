@@ -28,8 +28,8 @@ int main(){
     for(int i = 0; i < 20; i++){
         for(int j = 0; j < 17; j++){
             for(int iter = j; iter < j + 4; iter++){
-                horizontalProduct *= *(*(grid + i) + iter);
-                verticalProduct *= *(*(grid + iter) + j);
+                horizontalProduct *= *(*(grid + i) + iter);//i is row, iter is column
+                verticalProduct *= *(*(grid + iter) + j);//iter is row, j is column
             }
 
             if(maxProduct < horizontalProduct)
@@ -45,8 +45,8 @@ int main(){
     for(int i = 0; i < 17; i++){
         for(int j = 0; j < 17; j++){
             for(int iter1 = i, iter2 = j; iter1< i + 4 && iter2 < j + 4; iter1++, iter2++){
-                diagonalRightProduct *= *(*(grid + iter1) + iter2);
-                diagonalLeftProduct *= *(*(grid + iter1) + 19 - iter2);
+                diagonalRightProduct *= *(*(grid + iter1) + iter2);//iter1 is row, iter2 is column
+                diagonalLeftProduct *= *(*(grid + iter1) + 19 - iter2);//iter1 is row, 19 - iter2 is column
             }
 
             if(maxProduct < diagonalLeftProduct)
