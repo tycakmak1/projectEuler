@@ -11,7 +11,7 @@ int collatzSequenceLength(long long num, int length){
     }
     else{
         length += 2;
-        return collatzSequenceLength((3 * num + 1) / 2, length);
+        return collatzSequenceLength((3 * num + 1) / 2, length)
     }
 }
 
