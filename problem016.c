@@ -9,12 +9,8 @@ int main(){
     for(int i = 0; i < 1000; i++){
         for(int j = 0; j < 303; j++){
             twice = *(digits + j) * 2;
-            if(10 <= twice){
                 *(digits + j - 1) += twice / 10;
                 *(digits + j) = twice % 10;
-            }
-            else
-                *(digits + j) = twice;
         }
     }
     for(int i = 0; i < 303; i++)
