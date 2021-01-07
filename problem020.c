@@ -17,17 +17,15 @@ int main(){
     for(int i = 2; i < 101; i++){
         for(int j = 0; j < (int)digitNumber; j++){
             *(digits + j) *= i;
-            if(10 <= *(digits + j)){
-                k = j;
-                while(10 <= *(digits + k)){
-                    *(digits + k - 1) += *(digits + k) / 10;
-                    *(digits + k) %= 10;
-                    k--;
-                }
+            k = j;
+            while(10 <= *(digits + k)){
+                *(digits + k - 1) += *(digits + k) / 10;
+                *(digits + k) %= 10;
+                k--;
             }
         }
     }
-    
+
     for(int i = 0; i < (int)digitNumber; i++)
         sum += *(digits + i);
     printf("Sum of the digits of 100! is %d", sum);
