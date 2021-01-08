@@ -1,3 +1,7 @@
+/*          ###QUESTION###
+2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+
+What is the sum of the digits of the number 2^1000?*/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,8 +13,8 @@ int main(){
     for(int i = 0; i < 1000; i++){
         for(int j = 0; j < 303; j++){
             twice = *(digits + j) * 2;
-                *(digits + j - 1) += twice / 10;
-                *(digits + j) = twice % 10;
+            *(digits + j - 1) += twice / 10;
+            *(digits + j) = twice % 10;
         }
     }
     for(int i = 0; i < 303; i++)
