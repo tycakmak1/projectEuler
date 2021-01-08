@@ -1,3 +1,7 @@
+/*          ###QUESTION###
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+What is the 10 001st prime number?*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -17,7 +21,6 @@ int main(){
             prime = i;
             count ++;
         }
-
     printf("The 10001st prime is %d", prime);
     return 0;
 }
