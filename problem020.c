@@ -4,7 +4,7 @@
 
 int main(){
     float digitNumber = 0;
-    int sum = 0, k = 0;
+    int sum = 0;
     for(int i = 2; i < 101; i++)
         digitNumber += log(i)/log(10);
     digitNumber = ceil(digitNumber);
@@ -15,14 +15,11 @@ int main(){
     *(digits + (int)digitNumber - 1) = 1;
 
     for(int i = 2; i < 101; i++){
-        for(int j = 0; j < (int)digitNumber; j++){
+        for(int j = 0; j < (int)digitNumber; j++)
             *(digits + j) *= i;
-            k = j;
-            while(10 <= *(digits + k)){
-                *(digits + k - 1) += *(digits + k) / 10;
-                *(digits + k) %= 10;
-                k--;
-            }
+        for(int k = (int)digitNumber - 1; 0 < k; k--){
+            *(digits + k - 1) += *(digits + k) / 10;
+            *(digits + k) %= 10;
         }
     }
 
